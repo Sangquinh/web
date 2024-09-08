@@ -1,0 +1,2 @@
+[28-Jul-2021 08:36:08 Asia/Bangkok] PHP Fatal error:  Call to undefined method System::check_user_nhan_qua() in /home/thopsieucapcf/public_html/model/register_gift.php on line 11
+[28-Jul-2021 08:36:17 Asia/Bangkok] PHP Fatal error:  Call to undefined method System::check_user_nhan_qua() in /home/thopsieucapcf/public_html/model/register_gift.php on line 11

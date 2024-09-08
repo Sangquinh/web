@@ -1,0 +1,27 @@
+B1: Xem video share code trên xukak và làm theo. nếu ko hiểu thì bạn xem dưới đây nhé
+-----------------
+*NẾU BẠN CHƯA CÓ MIỀN
+
+Bước 1: Vào freenom tạo miền free nếu bạn không có điểu kiện để mua miền, hoặc có thể lên tenten.vn , inet.vn , nhanhoa.vn những web này mua miền đều có phí
+Bước 2: Tìm mục Đổi Nameserver. Bạn sẽ thấy có các Nameserver chống. Nhiệm vụ của bạn là thay đổi các Name Server này thành Nameserver của host mà bạn thuê (namsever host của bạn nếu bạn không biết thì hãy hỏi chủ host nhé)
+
+
+                  XONG PHẦN MIỀN
+-----------------
+*NẾU BẠN CHƯA CÓ HOSTING
+HÃY VÀO ĐÂY https://www.taowebngon.net/danhmucmuahost MUA HOSTING HOẶC VÀO tenten.vn , inet.vn , nhanhoa.vn... MUA HOST
+Sau đó các bạn vào [BỘ QUẢN LÍ TỆP] tiếp theo vào [public_html] sau đó up code mà mình đã share trên video, up code xong mọi người click vào code và ấn vào [TRÍCH RA] sau đó trích code ra.
+
+Tiếp theo vào file [/HIEUVIP22CONFIG/hieuvip22database.php] nó sẽ có 3 dòng này:
+------------
+ /*** Database Config ***/
+'LOCALHOST' => 'localhost', // mysql host service
+'USERNAME' => '', // username
+'PASSWORD' => '', // password
+'DATABASE' => '', // database name
+------------
+Khai báo thông tin database, user và password vào các mục như hình và bấm Lưu thay đổi. Lưu ý chỉ thay nội dung trong dấu ‘ ‘ và không xóa dấu ‘ ‘
+Bạn có thể xem cách tạo database tại đây 
+https://huongdan.vietnix.vn/tao-database-trong-cpanel/?gclid=CjwKCAjwi8iXBhBeEiwAKbUofdkrOa7XhQxDQLsvI73SSfHV3Wkl9emQxiLX8orafl7xrOK9-pHSehoCqLIQAvD_BwE
+
+MÌNH ĐÃ HƯỚNG DẪN MỌI NGƯỜI MỞ WEB R NHÉ, CÒN NẠP THẺ AUTO VÀ RÚT KC AUTO VÀO VIDEO CỦA MÌNH XEM NHÉ

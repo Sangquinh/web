@@ -1,0 +1,7 @@
+[09-Aug-2021 21:27:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopacccuakhoakillall.cf/admin/view/header.php on line 251
+[09-Aug-2021 21:27:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopacccuakhoakillall.cf/admin/view/header.php on line 251
+[09-Aug-2021 21:27:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopacccuakhoakillall.cf/admin/view/header.php on line 251
+[10-Aug-2021 07:24:43 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopacccuakhoakillall.cf/admin/view/header.php on line 251
+[10-Aug-2021 08:06:10 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopaccpro.tk/admin/view/header.php on line 255
+[10-Aug-2021 08:18:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopaccpro.tk/admin/view/header.php on line 251
+[10-Aug-2021 08:29:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function connect_db() on null in /home/thopsieucapcf/shopaccpro.tk/admin/view/header.php on line 251

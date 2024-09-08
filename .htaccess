@@ -1,0 +1,110 @@
+RewriteEngine on
+ErrorDocument 404 /view/error/404.php
+ErrorDocument 500 /view/error/500.php
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+# Rewrite Url
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^reg.html$ index.php?modun=account&act=register_v2 [L]
+RewriteRule ^login.html$ index.php?modun=account&act=login_v2 [L]
+RewriteRule ^verify.html$ view/account/verify.php [L]
+RewriteRule ^body/logout$ view/account/out.php [L]
+RewriteRule ^vai.php$ view/account/fb-login.php [L]
+
+# Rewrite Pages
+RewriteRule ^html/quay/([0-9]+)$ index.php?modun=vongquaykimcuong&act=index&id=$1 [L]
+#RewriteRule ^html/quay/(.*)([0-9]+)$ index.php?modun=vongquaykimcuong&act=index&id=$2 [L]
+RewriteRule ^body/random/KC2$ index.php?modun=game/homthinhbian&act=index [L]
+RewriteRule ^body/random/KC2/page=([0-9]+)$ index.php?modun=game/homthinhbian&act=index&page=$1 [L]
+RewriteRule ^body/random/KC1$ index.php?modun=game/kimcuong&act=index [L]
+RewriteRule ^body/random/KC1/page=([0-9]+)$ index.php?modun=game/kimcuong&act=index&page=$1 [L]
+RewriteRule ^html/quay11$ index.php?modun=game/bingovip&act=index [L]
+RewriteRule ^html/quay9$ index.php?modun=game/bingo4&act=index [L]
+RewriteRule ^html/quay10$ index.php?modun=game/bingo&act=index [L]
+RewriteRule ^html/quayso3$ index.php?modun=game/sieucap&act=index [L]
+RewriteRule ^body/random/FREEFIRE$ index.php?modun=freefire&act=index [L]
+RewriteRule ^body/random/FREEFIRE/page=([0-9]+)$ index.php?modun=freefire&act=index&page=$1 [L]
+RewriteRule ^body/random/FREEFIRE/acc/([0-9]+).html$ index.php?modun=freefire&act=xem_them&id=$1 [L]
+
+RewriteRule ^body/lienquan$ index.php?modun=lienquan&act=index [L]
+RewriteRule ^body/lienquan/page=([0-9]+)$ index.php?modun=lienquan&act=index&page=$1 [L]
+RewriteRule ^body/lienquan/acc/([0-9]+).html$ index.php?modun=lienquan&act=xem_them&id=$1 [L]
+
+RewriteRule ^html/latbai1$ index.php?modun=game/latthe1&act=index [L]
+RewriteRule ^html/latbai2$ index.php?modun=game/latthe2&act=index [L]
+RewriteRule ^random/freefire/(.*)$ index.php?modun=random_freefire&act=index&cname=$1 [L]
+RewriteRule ^random/freefire/(.*)/page=([0-9]+)$ index.php?modun=random_freefire&act=index&cname=$1&page=$2 [L]
+
+RewriteRule ^random/lienquan/(.*)$ index.php?modun=random_lienquan&act=index&cname=$1 [L]
+RewriteRule ^random/lienquan/(.*)/page=([0-9]+)$ index.php?modun=random_lienquan&act=index&cname=$1&page=$2 [L]
+
+#user profile rewrite
+RewriteRule ^user.html$ index.php?modun=action&act=index&cmd=thong_tin [L]
+RewriteRule ^user/napthe$ index.php?modun=action&act=index&cmd=nap-the [L]
+RewriteRule ^user/rutkc index.php?modun=action&act=index&cmd=rut-kc [L]
+RewriteRule ^login/doipass$ index.php?modun=action&act=index&cmd=doi_mat_khau[L]
+RewriteRule ^lich-su-giaodich.html$ index.php?modun=action&act=index&cmd=lich_su_giao_dich [L]
+RewriteRule ^lich-su-giaodich.html/page=([0-9]+)$ index.php?modun=action&act=index&cmd=lich_su_giao_dich&page=$1[L]
+RewriteRule ^html/lichsuquay$ index.php?modun=action&act=index&cmd=lich_su_quay [L]
+RewriteRule ^html/lichsuquay/page=([0-9]+)$ index.php?modun=action&act=index&cmd=lich_su_quay&page=$1 [L]
+
+RewriteRule ^lich-su-nap.html$ index.php?modun=action&act=index&cmd=lich_su_nap_the [L]
+RewriteRule ^lich-su-nap.html/page=([0-9]+)$ index.php?modun=action&act=index&cmd=lich_su_nap_the&page=$1 [L]
+RewriteRule ^html/quanhuy$ index.php?modun=rutquanhuy&act=index [L]
+RewriteRule ^html/quanhuy/page=([0-9]+)$ index.php?modun=rutquanhuy&act=index&page=$1 [L]
+RewriteRule ^html/kimcuong/$ index.php?modun=action&act=index&cmd=rut-kim-cuong [L]
+RewriteRule ^html/kimcuong/page=([0-9]+)$ index.php?modun=action&act=index&page=$1 [L]
+RewriteRule ^lich-su-mua.html$ index.php?modun=action&act=index&cmd=acc_ff [L]
+RewriteRule ^lich-su-mua.html/page=([0-9]+)$ index.php?modun=action&act=index&cmd=acc_ff&page=$1 [L]
+RewriteRule ^lich-su-random.html$ index.php?modun=action&act=index&cmd=random_ff [L]
+RewriteRule ^lich-su-random.html/page=([0-9]+)$ index.php?modun=action&act=index&cmd=random_ff&page=$1 [L]
+
+ # Rewrite Module
+RewriteRule ^system/user$ model/account/user.php [L]
+RewriteRule ^system/napthe$ model/account/napthe.php [L]
+
+RewriteRule ^system/vongquaykimcuong$ model/vongquaykimcuong/xuly.php [L]
+RewriteRule ^system/vongquaycodesung$ model/vongquaycodesung/xuly.php [L]
+RewriteRule ^system/bingo4$ model/game/bingo4/xuly.php [L]
+RewriteRule ^system/bingovip$ model/game/bingovip/xuly.php [L]
+RewriteRule ^system/bingo$ model/game/bingo/xuly.php [L]
+RewriteRule ^system/latthe1$ model/latthe1/xuly.php [L]
+RewriteRule ^system/latthe2$ model/latthe2/xuly.php [L]
+
+
+ # Rewrite ADMIN
+RewriteRule ^admin/homthinhbian$ admin/?modun=homthinhbian&act=index [L]
+RewriteRule ^admin/homthinhbian/page=([0-9]+)$ admin/?modun=homthinhbian&act=index&page=$1 [L]
+
+RewriteRule ^admin/rutkimcuong$ admin/?modun=rut_kim_cuong&act=index [L]
+RewriteRule ^admin/rutkimcuong/page=([0-9]+)$ admin/?modun=rut_kim_cuong&act=index&page=$1 [L]
+
+RewriteRule ^admin/rutquanhuy$ admin/?modun=rut_quan_huy&act=index [L]
+RewriteRule ^admin/rutquanhuy/page=([0-9]+)$ admin/?modun=rut_quan_huy&act=index&page=$1 [L]
+
+RewriteRule ^admin/kimcuong$ admin/?modun=kimcuong&act=index [L]
+RewriteRule ^admin/kimcuong/page=([0-9]+)$ admin/?modun=kimcuong&act=index&page=$1 [L]
+
+RewriteRule ^admin/bingo$ admin/?modun=bingo&act=index [L]
+RewriteRule ^admin/thenap$ admin/?modun=thenap&act=index [L]
+RewriteRule ^admin/thenap/page=([0-9]+)$ admin/?modun=thenap&act=index&page=$1 [L]
+RewriteRule ^admin/users$ admin/?modun=account&act=index [L]
+RewriteRule ^admin/users/page=([0-9]+)$ admin/?modun=account&act=index&page=$1 [L]
+
+RewriteRule ^admin/list_acc_random/(.*)$ admin/?modun=random_freefire&act=list_random&cname=$1 [L]
+RewriteRule ^admin/list_acc_random_lq/(.*)$ admin/?modun=random_lienquan&act=list_random_lq&cname=$1 [L]
+RewriteCond %{HTTP_HOST} ^test\.shopfreefire9k\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.test\.shopfreefire9k\.com$
+RewriteRule ^home$ "https\:\/\/test\.shopfreefire9k\.com\/" [R=301,L]
+# Alternative pour empêcher le listing des rédirectories
+IndexIgnore *
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
